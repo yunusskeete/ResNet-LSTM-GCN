@@ -1,7 +1,9 @@
 from numpy.random import seed
 seed(1)
-from tensorflow import set_random_seed
-set_random_seed(2)
+# from tensorflow import set_random_seed
+# set_random_seed(2)
+import tensorflow as tf
+tf.random.set_seed(2)
 import numpy as np
 np.set_printoptions(threshold=np.inf)
 import time, os
@@ -11,7 +13,8 @@ from keras.layers import *
 from keras.models import *
 from keras.utils.vis_utils import plot_model #visualize model
 from keras.models import load_model
-from keras.optimizers import Adam
+# from keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 from metrics import evaluate_performance
 from load_data import Get_All_Data
 
